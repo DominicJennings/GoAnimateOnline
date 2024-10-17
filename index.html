@@ -1,24 +1,70 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Assets Server</title>
-		<meta name="description" content="GoAnimate: Online's Assets Server"/>
-	</head>
-	<body>
-		<main>
-			<h1>GoAnimate: Online</h1>
-			<h2 id="welcome-to-the-home-of-the-asset-servers-for-goanimate-online">Welcome to the home of the asset servers for GoAnimate: Online.</h2>
+<html><head>
+    <title>GoAnimate: Online</title>
+    <script>
+      var uploadtoggle = false;
+      function showDownloads() {
+        if (!uploadtoggle) {
+          document.getElementById('downloadsdropdown').setAttribute("class", "dropdown hidden");
+          setTimeout(function() { document.getElementById('downloadsdropdown').setAttribute("class", "dropdown") }, 1);
+          uploadtoggle = true;
+        } else {
+          document.getElementById('downloadsdropdown').setAttribute("class", "dropdown hidden");
+          uploadtoggle = false;
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="/assets/modern-normalize.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  </head>
+  <body>
+    <header>
+      <a href="/">
+        <img src="/assets/logo.svg" title="GoAnimate: Online" alt="GoAnimate: Online" class="logo">
+      </a>
+      <div class="header-buttons">
+        <a href="https://github.com/Wrapper-Offline/Wrapper-Offline/wiki" class="information-button">
+          FAQ
+        </a>
+        <a onclick="showDownloads();" class="download-button">
+          Download Now!
+        </a>
+        <div class="dropdown none" id="downloadsdropdown">
+          <a href="/installer/installer_windows.exe">Windows</a>
+          <a href="/installer/installer_linux.tar">Linux</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Ever wanted to make GoAnimate videos?</h1>
+      <h2>Well nows your chance!</h2>
+      <p>GoAnimate: Online provides a fairly easy solution for using GoAnimate / Vyond's "Legacy Video Maker" after shut down.</p>
+      <br>
+      <hr>
+      <br>
+      <h3>What is GoAnimate / Vyond?</h3>
+      <p>GoAnimate in the past provided quick and easy to use animation tools that allowed anyone to animate. Since then, these tools have been discontinued and almost completely wiped from their newer and more corporate website Vyond. However, with GoAnimate: Online, you can continue to use this tools to their full capacity and for free!</p>
+      <hr class="shorthr">
+      <h3>How do I use GoAnimate: Online?</h3>
+      <p>GoAnimate: Online is fairly easy to install, click the "Download Now!" button above and select your operating system, then, either execute the installer .EXE or unpack the .TAR file and run the installer .SH script. When it's installed, you just run start_wrapper.bat and everything should work as intended, soon enough you'll be booted in and ready to go!</p>
+      <hr class="shorthr">
+      <h3>I installed it, and tried to use it, but I have an issue!</h3>
+      <p>If you have an issue, you should start by checking the FAQ page (button in the top-right) for information. If you can't find a fix to your issue or an answer to your question, you can join the support Discord server (linked in the footer below). If you're reporting your issue in the Discord server, please be specific when explaining what happened, that will best help the tech support team identify and fix your problem.</p>
+      <br>
+      <hr>
+      <br>
+      <h2><a onclick="showDownloads();" class="getstarted">Get started today!</a></h2>
+    </main>
+    <footer>
+      <nav id="foot-left">
+        <a href="https://github.com/Wrapper-Offline/Wrapper-Offline">Source Code (GoAnimate: Online)</a>
+        <a href="https://github.com/Wrapper-Offline/informational-website">Source Code (This website)</a>
+        <a href="https://discord.gg/yhGAetN">GoAnimate: Online Discord</a>
+      </nav>
+    </footer>
+  
 
-			<p>It’s most likely <a style="color:#777; cursor:pointer" id="cleverlydone" onclick="schneider.play()" but="">you’re not supposed to be here</a>.<br />
-				You probably got here through the magic known as the Network tab, by poking around GoAnimate: Online’s
-				files, or simply from the launcher.<br />
-				If you meant to come here, feel free to look around and do stuff. Maybe you’ll… OH… find a secret…</p>
-			<p><a href="http://localhost:4343">Click here to back to the video list</a></p>
-
-			<audio id="schneider" src="store/my_bakery.mp3">
-				Your browser doesn't support HTML audio… so much for my… little… easter egg… 
-			</audio>
-		</main>
-	</body>
-</html>
+</body></html>
